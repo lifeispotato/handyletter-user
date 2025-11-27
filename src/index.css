@@ -1,0 +1,43 @@
+/* 1. Import Pretendard Font (Standard CDN) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 2. Initialize Tailwind v4 */
+@import "tailwindcss";
+
+/* 3. Define Figma Tokens */
+@theme {
+  /* --- Typography --- */
+  /* This sets Pretendard as the default font for font-sans */
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* --- Colors --- */
+  
+  /* Primary Action (Buttons) */
+  --color-primary: #34C987;
+  
+  /* Backgrounds */
+  --color-primary-light: #D3F7E7;
+  --color-footer-bg: #E6E8EB;
+
+  /* Text & Grays (Mapped from your list) */
+  --color-gray-7: #262C31; /* Darkest - likely for headings */
+  --color-gray-5: #808991; /* Medium - likely for body text */
+  --color-gray-3: #BDBDBD; /* Light - likely for placeholders/borders */
+  
+  --color-white: #FFFFFF;
+  /* ... existing colors ... */
+  --color-gray-6: #636C73;
+  --color-gray-4: #B8BFC4;
+  --color-error: #CF2B49;
+  --color-input-bg-disabled: #F2F4F5;
+  --color-input-border: #E6E8EB;
+}
+
+/* 4. Optional: Base Styles for global consistency */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-white);
+    color: var(--color-gray-7); /* Default text color */
+  }
+}
